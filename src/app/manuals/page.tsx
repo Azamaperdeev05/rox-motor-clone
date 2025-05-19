@@ -111,4 +111,7 @@ export default function ManualsPage() {
       </div>
 
       <Footer />
+    </main>
+  );
+}
  
