@@ -6,7 +6,14 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language-context";
 import { translations, TranslationKey } from "@/lib/translations";
 
-const colors = [
+interface CarColor {
+  id: string;
+  name: TranslationKey;
+  hex: string;
+  image: string;
+}
+
+const colors: CarColor[] = [
   { id: "white", name: "car.color.white", hex: "#FFFFFF", image: "https://ext.same-assets.com/964890150/99191941.webp" },
   { id: "black", name: "car.color.black", hex: "#212020", image: "https://ext.same-assets.com/964890150/3246946396.webp" },
   { id: "gray", name: "car.color.gray", hex: "#868E95", image: "https://ext.same-assets.com/964890150/3365328880.webp" },

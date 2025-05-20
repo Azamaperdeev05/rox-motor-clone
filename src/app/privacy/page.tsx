@@ -3,10 +3,16 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/lib/language-context";
-import { translations } from '@/lib/translations';
+import { translations, TranslationKey } from '@/lib/translations';
 import { motion } from "framer-motion";
 
-const sections = [
+interface PrivacySection {
+  id: string;
+  title: TranslationKey;
+  content: TranslationKey;
+}
+
+const sections: PrivacySection[] = [
   {
     id: 'collection',
     title: 'privacy.collection.title',
@@ -41,7 +47,7 @@ const sections = [
 
 export default function PrivacyPage() {
   const { language } = useLanguage();
-  const t = (key: string) => translations[language][key];
+  const t = (key: TranslationKey) => translations[language][key];
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -97,7 +103,7 @@ export default function PrivacyPage() {
                 <p className="text-gray-300">
                   <strong>{t('privacy.contact.phone')}:</strong>{' '}
                   <a href="tel:+77271234567" className="text-primary hover:text-primary/80">
-                    +7 (727) 123-45-67
+                    +7 (771) 525 35 95
                   </a>
                 </p>
                 <p className="text-gray-300">
@@ -122,4 +128,4 @@ export default function PrivacyPage() {
       <Footer />
     </main>
   );
-} 
+}

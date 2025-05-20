@@ -14,27 +14,11 @@ interface SocialLink {
 export function SocialLinks() {
   const { language } = useLanguage();
   const t = (key: TranslationKey) => translations[language][key];
-
   const socialLinks: SocialLink[] = [
     {
-      name: "Facebook",
-      url: "https://facebook.com/roxmotors",
-      icon: <Facebook className="h-5 w-5" />,
-    },
-    {
       name: "Instagram",
-      url: "https://instagram.com/roxmotors",
+      url: "https://instagram.com/rox.doscar.astana",
       icon: <Instagram className="h-5 w-5" />,
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/roxmotors",
-      icon: <Twitter className="h-5 w-5" />,
-    },
-    {
-      name: "YouTube",
-      url: "https://youtube.com/roxmotors",
-      icon: <Youtube className="h-5 w-5" />,
     },
   ];
 

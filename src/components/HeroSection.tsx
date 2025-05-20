@@ -5,49 +5,43 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language-context";
 import { translations, TranslationKey } from "@/lib/translations";
+import Image from "next/image";
 
 export function HeroSection() {
   const { language } = useLanguage();
   const t = (key: TranslationKey) => translations[language][key];
 
   return (
-    <section className="hero-section relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src="https://ext.same-assets.com/964890150/2784361665.webp"
-          alt="ROX01 SUV"
-          className="w-full h-full object-cover"
+    <section className="relative min-h-screen bg-black text-white">
+      <div className="absolute inset-0">
+        <Image
+          src="https://roxmotor.kz/storage/benefits/December2024/l8CZCYoUJal7R22SGmCE.webp"
+          alt="ROX01"
+          fill
+          className="object-cover"
+          priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="hero-content relative z-10 flex flex-col items-start max-w-2xl px-8 py-16">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-bold text-white mb-4"
-        >
-          {t('hero.title')}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl md:text-2xl text-white mb-8 max-w-md"
-        >
-          {t('hero.subtitle')}
-        </motion.p>
+      <div className="relative container mx-auto px-4 pt-32 pb-16 flex flex-col justify-center items-center min-h-screen text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
         >
-          <Link href="/configuration">
-            <Button className="bg-white text-black hover:bg-white/90 font-medium px-6 py-3 text-lg">
-              {t('hero.button')}
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('hero.title')}</h1>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button
+              size="lg"
+              variant="default"
+              className="bg-white text-black hover:bg-white/90"
+              asChild
+            >
+              <Link href="/configuration">{t('hero.button')}</Link>
             </Button>
-          </Link>
+          </div>
         </motion.div>
       </div>
     </section>

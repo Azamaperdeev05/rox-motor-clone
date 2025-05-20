@@ -3,31 +3,38 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/lib/language-context";
-import { translations } from '@/lib/translations';
+import { translations, TranslationKey } from '@/lib/translations';
 import { motion } from "framer-motion";
 
-const warrantyItems = [
+interface WarrantyItem {
+  id: string;
+  title: TranslationKey;
+  description: TranslationKey;
+  period: string;
+}
+
+const warrantyItems: WarrantyItem[] = [
   {
     id: 'battery',
-    title: 'warranty.battery.title',
+    title: 'warranty.terms.2',
     description: 'warranty.battery.description',
     period: '8 years'
   },
   {
     id: 'motor',
-    title: 'warranty.motor.title',
+    title: 'warranty.terms.1',
     description: 'warranty.motor.description',
     period: '5 years'
   },
   {
     id: 'body',
-    title: 'warranty.body.title',
+    title: 'warranty.terms.3',
     description: 'warranty.body.description',
     period: '5 years'
   },
   {
     id: 'paint',
-    title: 'warranty.paint.title',
+    title: 'warranty.terms.4',
     description: 'warranty.paint.description',
     period: '3 years'
   }
@@ -35,7 +42,7 @@ const warrantyItems = [
 
 export default function WarrantyPage() {
   const { language } = useLanguage();
-  const t = (key: string) => translations[language][key];
+  const t = (key: TranslationKey) => translations[language][key];
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -81,28 +88,33 @@ export default function WarrantyPage() {
           >
             <div className="p-6 bg-gray-900 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">{t('warranty.terms.title')}</h2>
-              <div className="space-y-4">
-                {[1, 2, 3, 4].map((num) => (
-                  <div key={num} className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mr-4 flex-shrink-0">
-                      {num}
+              <div className="space-y-4">                {[1, 2, 3, 4].map((num) => {
+                  const translationKey = `warranty.terms.${num}` as TranslationKey;
+                  return (
+                    <div key={num} className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mr-4 flex-shrink-0">
+                        {num}
+                      </div>
+                      <p className="text-gray-300">{t(translationKey)}</p>
                     </div>
-                    <p className="text-gray-300">{t(`warranty.terms.${num}`)}</p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
             <div className="p-6 bg-gray-900 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">{t('warranty.service.title')}</h2>
               <p className="text-gray-300 mb-6">{t('warranty.service.description')}</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {['phone', 'email', 'chat'].map((method) => (
-                  <div key={method} className="p-4 bg-gray-800 rounded-lg">
-                    <h3 className="font-bold mb-2">{t(`warranty.service.${method}.title`)}</h3>
-                    <p className="text-gray-300">{t(`warranty.service.${method}.description`)}</p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">                {['phone', 'email', 'chat'].map((method) => {
+                  const titleKey = `warranty.service.${method}.title` as TranslationKey;
+                  const descriptionKey = `warranty.service.${method}.description` as TranslationKey;
+                  return (
+                    <div key={method} className="p-4 bg-gray-800 rounded-lg">
+                      <h3 className="font-bold mb-2">{t(titleKey)}</h3>
+                      <p className="text-gray-300">{t(descriptionKey)}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </motion.div>
@@ -112,4 +124,4 @@ export default function WarrantyPage() {
       <Footer />
     </main>
   );
-} 
+}

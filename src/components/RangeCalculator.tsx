@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations } from '@/lib/translations';
+import { useLanguage } from '@/lib/language-context';
+import { translations } from '@/lib/translations';
+import type { TranslationKey } from '@/lib/translations';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -10,16 +12,16 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 
 export function RangeCalculator() {
-  const t = useTranslations();
+  const { language } = useLanguage();
+  const t = (key: TranslationKey) => translations[language][key];
   const [batteryLevel, setBatteryLevel] = useState(100);
   const [temperature, setTemperature] = useState(20);
   const [speed, setSpeed] = useState(60);
   const [terrain, setTerrain] = useState('flat');
   const [calculatedRange, setCalculatedRange] = useState<number | null>(null);
 
-  const calculateRange = () => {
-    // Базалық қашықтық (WLTC бойынша)
-    let baseRange = 500;
+  const calculateRange = () => {    // Базалық қашықтық (WLTC бойынша)
+    const baseRange = 500;
 
     // Батарея зарядының әсері
     const batteryFactor = batteryLevel / 100;
@@ -28,14 +30,14 @@ export function RangeCalculator() {
     const tempFactor = temperature < 0 ? 0.7 : temperature > 30 ? 0.8 : 1;
 
     // Жылдамдықтың әсері
-    const speedFactor = speed < 50 ? 1.2 : speed > 100 ? 0.7 : 1;
-
-    // Жер бедерінің әсері
-    const terrainFactor = {
+    const speedFactor = speed < 50 ? 1.2 : speed > 100 ? 0.7 : 1;    // Жер бедерінің әсері
+    const terrainFactors = {
       flat: 1,
       hilly: 0.8,
       mountainous: 0.6
-    }[terrain];
+    } as const;
+
+    const terrainFactor = terrainFactors[terrain as keyof typeof terrainFactors];
 
     // Жалпы қашықтықты есептеу
     const range = Math.round(baseRange * batteryFactor * tempFactor * speedFactor * terrainFactor);
@@ -123,4 +125,4 @@ export function RangeCalculator() {
       </Card>
     </motion.div>
   );
-} 
+}

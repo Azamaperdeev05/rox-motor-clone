@@ -1,6 +1,7 @@
 export type Language = 'ru' | 'kk' | 'en';
 
 export type TranslationKey =
+  | 'contact.info.email'
   | 'nav.home'
   | 'nav.rox'
   | 'nav.price'
@@ -68,6 +69,30 @@ export type TranslationKey =
   | 'car.color.gray'
   | 'car.color.brown'
   | 'car.color.silver'
+  | 'car.subtitle'
+  | 'car.description'
+  | 'car.features.title'
+  | 'car.features.description'
+  | 'car.features.1'
+  | 'car.features.2'
+  | 'car.features.3'
+  | 'car.features.4'
+  | 'car.features.5'
+  | 'car.price.7seater'
+  | 'car.price.6seater'
+  | 'car.configuration.title'
+  | 'car.configuration.7seater'
+  | 'car.configuration.6seater'
+  | 'car.configuration.difference'
+  | 'car.configuration.choice'
+  | 'car.configuration.seating'
+  | 'car.meaning.line'
+  | 'car.meaning.stone'
+  | 'car.meaning.style'
+  | 'car.spirit.title'
+  | 'car.spirit.description'
+  | 'car.spirit.spring'
+  | 'car.spirit.power'
   | 'contact.title'
   | 'contact.subtitle'
   | 'contact.description'
@@ -82,9 +107,10 @@ export type TranslationKey =
   | 'contact.form.submit'
   | 'contact.info.title'
   | 'contact.info.address'
+  | 'contact.info.address.value'
   | 'contact.info.phone'
-  | 'contact.info.email'
   | 'contact.info.hours'
+  | 'contact.info.email'
   | 'footer.about.title'
   | 'footer.about.description'
   | 'footer.navigation'
@@ -151,7 +177,137 @@ export type TranslationKey =
   | 'calculator.flat'
   | 'calculator.hilly'
   | 'calculator.mountainous'
-  | 'calculator.disclaimer';
+  | 'calculator.disclaimer'
+  | 'config.title'
+  | 'config.subtitle'
+  | 'config.rotate'
+  | 'config.color.title'
+  | 'config.wheels.title'
+  | 'config.interior.title'
+  | 'config.total'
+  | 'config.order'
+  | 'wheels.standard'
+  | 'wheels.sport'
+  | 'wheels.luxury'
+  | 'interior.standard'
+  | 'interior.premium'
+  | 'interior.luxury'
+  | 'about.title'
+  | 'about.subtitle'
+  | 'about.mission.title'
+  | 'about.mission.description'
+  | 'about.vision.title'
+  | 'about.vision.description'
+  | 'about.history.title'
+  | 'about.history.year2020'
+  | 'about.history.year2021'
+  | 'about.history.year2022'
+  | 'about.history.year2023'
+  | 'about.history.year2024'
+  | 'about.history.year2025'
+  | 'about.history.title2020'
+  | 'about.history.title2021'
+  | 'about.history.title2022'
+  | 'about.history.title2023'
+  | 'about.history.title2024'
+  | 'about.history.title2025'
+  | 'about.history.description2020'
+  | 'about.history.description2021'
+  | 'about.history.description2022'
+  | 'about.history.description2023'
+  | 'about.history.description2024'
+  | 'about.history.description2025'
+  | 'about.values.title'
+  | 'about.values.innovation.title'
+  | 'about.values.innovation.description'
+  | 'about.values.sustainability.title'
+  | 'about.values.sustainability.description'
+  | 'about.values.quality.title'
+  | 'about.values.quality.description'
+  | 'about.values.customer.title'
+  | 'about.values.customer.description'
+  | 'manuals.title'
+  | 'manuals.subtitle'
+  | 'manuals.download'
+  | 'manuals.support.title'
+  | 'manuals.support.description'
+  | 'manuals.owner.title'
+  | 'manuals.owner.description'
+  | 'manuals.service.title'
+  | 'manuals.service.description'
+  | 'manuals.quick.title'
+  | 'manuals.quick.description'
+  | 'manuals.user.title'
+  | 'manuals.user.description'
+  | 'manuals.warranty.title'
+  | 'manuals.warranty.description'
+  | 'manuals.safety.title'
+  | 'manuals.safety.description'
+  | 'price.title'
+  | 'price.subtitle'
+  | 'price.standard.title'
+  | 'price.standard.features'
+  | 'price.premium.title'
+  | 'price.premium.features'
+  | 'price.luxury.title'
+  | 'price.luxury.features'
+  | 'price.select'
+  | 'price.financing.title'
+  | 'price.financing.description'
+  | 'price.financing.button'
+  | 'price.feature.battery'
+  | 'price.feature.range'
+  | 'price.feature.speed'
+  | 'price.feature.charging'
+  | 'price.feature.interior'
+  | 'price.feature.warranty'
+  | 'privacy.title'
+  | 'privacy.subtitle'
+  | 'privacy.collection.title'
+  | 'privacy.collection.content'
+  | 'privacy.usage.title'
+  | 'privacy.usage.content'
+  | 'privacy.sharing.title'
+  | 'privacy.sharing.content'
+  | 'privacy.security.title'
+  | 'privacy.security.content'
+  | 'privacy.cookies.title'
+  | 'privacy.cookies.content'
+  | 'privacy.rights.title'
+  | 'privacy.rights.content'
+  | 'privacy.contact.title'
+  | 'privacy.contact.description'
+  | 'privacy.contact.email'
+  | 'privacy.contact.phone'
+  | 'privacy.contact.address'
+  | 'privacy.contact.address.value'
+  | 'privacy.lastUpdated'
+  | 'privacy.lastUpdated.date'
+  | 'warranty.title'
+  | 'warranty.subtitle'
+  | 'warranty.terms.title'
+  | 'warranty.terms.1'
+  | 'warranty.terms.2'
+  | 'warranty.terms.3'
+  | 'warranty.terms.4'
+  | 'warranty.terms.5'
+  | 'warranty.service.title'
+  | 'warranty.service.description'
+  | 'warranty.service.online.title'
+  | 'warranty.service.online.description'
+  | 'warranty.service.phone.title'
+  | 'warranty.service.phone.description'
+  | 'warranty.service.email.title'
+  | 'warranty.service.email.description'
+  | 'warranty.service.chat.title'
+  | 'warranty.service.chat.description'
+  | 'warranty.battery.description'
+  | 'warranty.motor.description'
+  | 'warranty.body.description'
+  | 'warranty.paint.description'
+  | 'dealer.info'
+  | 'warranty.info'
+  | 'service.info';
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {
   ru: {
@@ -167,7 +323,7 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'gallery.exterior': 'Экстерьер',
     'gallery.interior': 'Интерьер',
     'gallery.details': 'Детали',
-    'hero.title': 'ROX01 SUV',
+    'hero.title': 'ROX01 ',
     'hero.subtitle': 'Электрический кроссовер нового поколения',
     'hero.button': 'Сконфигурировать',
     'specs.title': 'Технические характеристики',
@@ -222,6 +378,30 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'car.color.gray': 'Серый',
     'car.color.brown': 'Коричневый',
     'car.color.silver': 'Серебристый',
+    'car.subtitle': 'ROX01 - Электрический кроссовер нового поколения',
+    'car.description': 'ROX 01 - продуманная конфигурация под ваши задачи.',
+    'car.features.title': 'Особенности',
+    'car.features.description': 'Узнайте больше о преимуществах ROX01.',
+    'car.features.1': 'Полностью электрический двигатель',
+    'car.features.2': 'Запас хода до 500 км',
+    'car.features.3': 'Разгон 0-100 км/ч за 4.5 секунды',
+    'car.features.4': 'Система умной зарядки',
+    'car.features.5': 'Передовые системы безопасности',
+    'car.price.7seater': '29 900 000 тг',
+    'car.price.6seater': '31 500 000 тг',
+    'car.configuration.title': 'Доступные конфигурации',
+    'car.configuration.7seater': '7-местная конфигурация',
+    'car.configuration.6seater': '6-местная конфигурация',
+    'car.configuration.seating': 'Модель доступна в 7-местной конфигурации стоимостью 29 900 000 тг и 6-местной конфигурации стоимостью 31 500 000 тг.',
+    'car.configuration.difference': 'Ключевое отличие - второй ряд. А также в 6-местной версии установлены индивидуальные кресла Zero Gravity с расширенной регулировкой и максимальным комфортом в дальних поездках.',
+    'car.configuration.choice': 'Выбор за вами: вместительность или премиум-эргономика.',
+    'car.meaning.line': 'ROX 01 - каждый штрих имеет значение.',
+    'car.meaning.stone': 'Символ камня - прочность, устойчивость, внутренняя сила.',
+    'car.meaning.style': 'Это не просто стиль. Это характер в деталях.',
+    'car.spirit.title': 'Дух ROX',
+    'car.spirit.description': 'Когда ветер встречается с землей, когда кони устремляются к горизонту - рождается истинный дух ROX 01.',
+    'car.spirit.spring': 'Весна в степи — время силы, свободы и движения вперед.',
+    'car.spirit.power': 'Это не просто кадры. Это — мощь. Это — первозданная сила природы. Это — ROX.',
     'contact.title': 'Свяжитесь с нами',
     'contact.subtitle': 'Мы всегда готовы ответить на ваши вопросы',
     'contact.description': 'Заполните форму, и наш менеджер свяжется с вами в ближайшее время',
@@ -235,16 +415,17 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'contact.form.message': 'Сообщение',
     'contact.form.submit': 'Отправить',
     'contact.info.title': 'Контактная информация',
-    'contact.info.address': 'г. Алматы, ул. Примерная, 123',
-    'contact.info.phone': '+7 (727) 123-45-67',
-    'contact.info.email': 'info@roxmotors.com',
+    'contact.info.address': 'Адрес',
+    'contact.info.address.value': 'Сарайшык 34 А, Астана, Казахстан 010000',
+    'contact.info.phone': 'Телефон',
     'contact.info.hours': 'Пн-Пт: 9:00 - 18:00',
+    'contact.info.email': 'Email',
     'footer.about.title': 'О компании',
     'footer.about.description': 'ROX Motors - первый казахстанский производитель электромобилей, создающий инновационные и экологичные транспортные решения.',
     'footer.navigation': 'Навигация',
     'footer.contact.title': 'Контакты',
-    'footer.contact.address': 'г. Алматы, ул. Примерная, 123',
-    'footer.contact.phone': '+7 (727) 123-45-67',
+    'footer.contact.address': 'Сарайшык 34 А, Акмола, Астана, Казахстан 010000',
+    'footer.contact.phone': '+7 (771) 525 35 95',
     'footer.contact.email': 'info@roxmotors.com',
     'footer.social': 'Социальные сети',
     'footer.rights': 'Все права защищены',
@@ -305,7 +486,137 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'admin.amount': 'Сумма',
     'admin.actions': 'Действия',
     'admin.view': 'Просмотр',
-    'admin.comingSoon': 'Скоро будет доступно'
+    'admin.comingSoon': 'Скоро будет доступно',
+    'config.title': 'Конфигуратор',
+    'config.subtitle': 'Создайте свой идеальный ROX01',
+    'config.rotate': 'Повернуть для просмотра',
+    'config.color.title': 'Выберите цвет',
+    'config.wheels.title': 'Выберите колеса',
+    'config.interior.title': 'Выберите интерьер',
+    'config.total': 'Итоговая стоимость',
+    'config.order': 'Оформить заказ',
+    'wheels.standard': 'Стандартные',
+    'wheels.sport': 'Спортивные',
+    'wheels.luxury': 'Люкс',
+    'interior.standard': 'Стандартный',
+    'interior.premium': 'Премиум',
+    'interior.luxury': 'Люкс',
+    'about.title': 'О компании',
+    'about.subtitle': 'Инновации в автомобильной промышленности Казахстана',
+    'about.mission.title': 'Наша миссия',
+    'about.mission.description': 'Создавать передовые электромобили, которые изменят будущее транспорта в Казахстане',
+    'about.vision.title': 'Наше видение',
+    'about.vision.description': 'Стать лидером в производстве электромобилей в Центральной Азии',
+    'about.history.title': 'История компании',
+    'about.history.year2020': '2020',
+    'about.history.year2021': '2021',
+    'about.history.year2022': '2022',
+    'about.history.year2023': '2023',
+    'about.history.year2024': '2024',
+    'about.history.year2025': '2025',
+    'about.history.title2020': 'Основание компании',
+    'about.history.title2021': 'Начало разработки',
+    'about.history.title2022': 'Первые прототипы',
+    'about.history.title2023': 'Запуск производства',
+    'about.history.title2024': 'Расширение линейки',
+    'about.history.title2025': 'Международный выход',
+    'about.history.description2020': 'Создание компании ROX Motors',
+    'about.history.description2021': 'Начало разработки первого электромобиля',
+    'about.history.description2022': 'Создание и тестирование первых прототипов',
+    'about.history.description2023': 'Запуск серийного производства ROX01',
+    'about.history.description2024': 'Разработка новых моделей',
+    'about.history.description2025': 'Выход на международный рынок',
+    'about.values.title': 'Наши ценности',
+    'about.values.innovation.title': 'Инновации',
+    'about.values.innovation.description': 'Постоянное стремление к совершенствованию и внедрению новых технологий',
+    'about.values.sustainability.title': 'Устойчивое развитие',
+    'about.values.sustainability.description': 'Забота об окружающей среде и будущих поколениях',
+    'about.values.quality.title': 'Качество',
+    'about.values.quality.description': 'Высокие стандарты на всех этапах производства',
+    'about.values.customer.title': 'Клиентоориентированность',
+    'about.values.customer.description': 'Внимание к потребностям и пожеланиям наших клиентов',
+    'manuals.title': 'Руководства',
+    'manuals.subtitle': 'Документация и инструкции по эксплуатации ROX01',
+    'manuals.download': 'Скачать PDF',
+    'manuals.support.title': 'Техническая поддержка',
+    'manuals.support.description': 'Если у вас возникли вопросы, наша служба поддержки всегда готова помочь',
+    'manuals.owner.title': 'Руководство пользователя',
+    'manuals.owner.description': 'Полное руководство по эксплуатации вашего ROX01',
+    'manuals.service.title': 'Сервисное руководство',
+    'manuals.service.description': 'Техническая информация для обслуживания и ремонта',
+    'manuals.quick.title': 'Краткое руководство',
+    'manuals.quick.description': 'Основные функции и быстрый старт',
+    'manuals.user.title': 'Руководство пользователя',
+    'manuals.user.description': 'Полное руководство по эксплуатации вашего ROX01',
+    'manuals.warranty.title': 'Гарантийное руководство',
+    'manuals.warranty.description': 'Условия гарантии и обслуживания',
+    'manuals.safety.title': 'Руководство по безопасности',
+    'manuals.safety.description': 'Важная информация о безопасности и правилах эксплуатации',
+    'price.title': 'Цены и комплектации',
+    'price.subtitle': 'Выберите подходящую комплектацию ROX01',
+    'price.standard.title': 'Стандарт',
+    'price.standard.features': '- Базовая комплектация',
+    'price.premium.title': 'Премиум',
+    'price.premium.features': '- Расширенная комплектация',
+    'price.luxury.title': 'Люкс',
+    'price.luxury.features': '- Максимальная комплектация',
+    'price.select': 'Выбрать конфигурацию',
+    'price.financing.title': 'Доступное финансирование',
+    'price.financing.description': 'Мы предлагаем гибкие условия финансирования для покупки вашего ROX01',
+    'price.financing.button': 'Узнать больше',
+    'price.feature.battery': 'Батарея 100 кВтч',
+    'price.feature.range': 'Запас хода 500 км',
+    'price.feature.speed': 'Разгон 0-100 км/ч за 4.5 сек',
+    'price.feature.charging': 'Быстрая зарядка',
+    'price.feature.interior': 'Премиум интерьер',
+    'price.feature.warranty': '5 лет гарантии',
+    'privacy.title': 'Политика конфиденциальности',
+    'privacy.subtitle': 'Как мы защищаем ваши данные',
+    'privacy.collection.title': 'Сбор информации',
+    'privacy.collection.content': 'Мы собираем информацию, которую вы предоставляете при использовании наших услуг.\nЭто может включать личную информацию, такую как имя, адрес электронной почты и номер телефона.',
+    'privacy.usage.title': 'Использование информации',
+    'privacy.usage.content': 'Мы используем собранную информацию для предоставления и улучшения наших услуг.\nВаша информация помогает нам персонализировать ваш опыт и общаться с вами.',
+    'privacy.sharing.title': 'Передача информации',
+    'privacy.sharing.content': 'Мы не продаем и не передаем вашу личную информацию третьим лицам.\nИсключения составляют случаи, предусмотренные законодательством.',
+    'privacy.security.title': 'Безопасность',
+    'privacy.security.content': 'Мы принимаем необходимые меры для защиты вашей информации.\nИспользуем современные технологии шифрования и безопасного хранения данных.',
+    'privacy.cookies.title': 'Файлы cookie',
+    'privacy.cookies.content': 'Мы используем файлы cookie для улучшения работы сайта.\nВы можете настроить свой браузер для отказа от использования файлов cookie.',
+    'privacy.rights.title': 'Ваши права',
+    'privacy.rights.content': 'Вы имеете право на доступ к своей личной информации.\nВы можете запросить удаление или изменение вашей информации.',
+    'privacy.contact.title': 'Связаться с нами',
+    'privacy.contact.description': 'Если у вас есть вопросы о нашей политике конфиденциальности, свяжитесь с нами:',
+    'privacy.contact.email': 'Email',
+    'privacy.contact.phone': 'Телефон',
+    'privacy.contact.address': 'Адрес',
+    'privacy.contact.address.value': 'Сарайшык 34 А, Акмола, Астана, Казахстан 010000',
+    'privacy.lastUpdated': 'Последнее обновление',
+    'privacy.lastUpdated.date': '20 мая 2025 г.',
+    'warranty.title': 'Гарантия',
+    'warranty.subtitle': 'Информация о гарантийном обслуживании',
+    'warranty.terms.title': 'Условия гарантии',
+    'warranty.terms.1': 'Гарантия действует в течение 5 лет или 150 000 км пробега',
+    'warranty.terms.2': 'Гарантия на батарею - 8 лет или 200 000 км пробега',
+    'warranty.terms.3': 'Гарантия распространяется на все производственные дефекты',
+    'warranty.terms.4': 'Гарантийное обслуживание доступно во всех официальных сервисных центрах',
+    'warranty.terms.5': 'Регулярное техническое обслуживание обязательно для сохранения гарантии',
+    'warranty.service.title': 'Сервисное обслуживание',
+    'warranty.service.description': 'Мы предлагаем несколько способов получить гарантийное обслуживание',
+    'warranty.service.online.title': 'Онлайн запись',
+    'warranty.service.online.description': 'Запишитесь на сервис через наш сайт',
+    'warranty.service.phone.title': 'По телефону',
+    'warranty.service.phone.description': 'Свяжитесь с нами по телефону для получения помощи.',
+    'warranty.service.email.title': 'По электронной почте',
+    'warranty.service.email.description': 'Напишите нам на электронную почту.',
+    'warranty.service.chat.title': 'В чате',
+    'warranty.service.chat.description': 'Получите мгновенную помощь в онлайн-чате.',
+    'warranty.battery.description': 'Гарантия на высоковольтную батарею включает защиту от дефектов и поддержание минимальной емкости.',
+    'warranty.motor.description': 'Полная гарантия на электродвигатель и все его компоненты.',
+    'warranty.body.description': 'Защита от сквозной коррозии и структурных дефектов кузова.',
+    'warranty.paint.description': 'Гарантия на лакокрасочное покрытие от дефектов и выцветания.',
+    'dealer.info': 'Официальный дилер ROX в г. Астана',
+    'warranty.info': 'Гарантия 5 лет и 8 лет на аккумулятор',
+    'service.info': 'Сервисный центр в г. Астана'
   },
   kk: {
     'nav.home': 'Басты бет',
@@ -320,7 +631,7 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'gallery.exterior': 'Сыртқы көрініс',
     'gallery.interior': 'Ішкі көрініс',
     'gallery.details': 'Бөлшектер',
-    'hero.title': 'ROX01 SUV',
+    'hero.title': 'ROX01',
     'hero.subtitle': 'Жаңа ұрпақ электр кроссовері',
     'hero.button': 'Конфигурациялау',
     'specs.title': 'Техникалық сипаттамалар',
@@ -375,10 +686,34 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'car.color.gray': 'Сұр',
     'car.color.brown': 'Қоңыр',
     'car.color.silver': 'Күміс түсті',
+    'car.subtitle': 'ROX01 - Жаңа ұрпақ электр кроссовері',
+    'car.description': 'ROX 01 – сіздің міндеттеріңізге сәйкес ойластырылған конфигурация.',
+    'car.features.title': 'Ерекшеліктер',
+    'car.features.description': 'ROX01 артықшылықтары туралы көбірек біліңіз.',
+    'car.features.1': 'Толығымен электр қозғалтқышы',
+    'car.features.2': '500 км дейінгі қашықтық',
+    'car.features.3': '0-100 км/сағ 4.5 секундта жылдамдық',
+    'car.features.4': 'Ақылды зарядтау жүйесі',
+    'car.features.5': 'Озық қауіпсіздік жүйелері',
+    'car.price.7seater': '29 900 000 тг',
+    'car.price.6seater': '31 500 000 тг',
+    'car.configuration.title': 'Қолжетімді конфигурациялар',
+    'car.configuration.7seater': '7 орындық конфигурация',
+    'car.configuration.6seater': '6 орындық конфигурация',
+    'car.configuration.seating': 'Модель 7 орындық конфигурацияда 29 900 000 тг және 6 орындық конфигурацияда 31 500 000 тг бағасымен қолжетімді.',
+    'car.configuration.difference': 'Негізгі айырмашылық – екінші қатар. Сонымен қатар, 6 орындық нұсқада ұзақ сапарларда жайлылықты арттыратын және кеңейтілген реттеу мүмкіндігі бар Zero Gravity жеке орындықтары орнатылған.',
+    'car.configuration.choice': 'Таңдау сіздікі: сыйымдылық немесе премиум-эргономика.',
+    'car.meaning.line': 'ROX 01 - әр сызығында мағынасы бар.',
+    'car.meaning.stone': 'Тас символы - беріктік, тұрақтылық, ішкі күш.',
+    'car.meaning.style': 'Бұл жай ғана стиль емес. Бұл - детальдердегі мінез.',
+    'car.spirit.title': 'ROX рухы',
+    'car.spirit.description': 'Жел мен жер тоғысқан, тұлпарлар көкжиекке қарай самғаған сәтте — нағыз ROX 01 рухы туылады.',
+    'car.spirit.spring': 'Даладағы көктем — күштің, еркіндіктің және алға ұмтылыстың мезгілі.',
+    'car.spirit.power': 'Бұл жай ғана кадрлар емес. Бұл — қуат. Бұл — табиғаттың бастапқы күші. Бұл — ROX.',
     'contact.title': 'Бізбен байланысыңыз',
-    'contact.subtitle': 'Біз әрқашан сұрақтарыңызға жауап беруге дайынбыз',
-    'contact.description': 'Нысанды толтырыңыз, және біздің менеджер сізбен жақын арада байланысады',
-    'contact.name': 'Аты-жөні',
+    'contact.subtitle': 'Сұрақтарыңызға жауап беруге әрдайым дайынбыз',
+    'contact.description': 'Форманы толтырыңыз, және біздің менеджер сізбен жақын арада байланысады',
+    'contact.name': 'Аты',
     'contact.phone': 'Телефон',
     'contact.email': 'Эл. пошта',
     'contact.privacy': 'Мен құпиялылық саясатымен келісемін',
@@ -388,16 +723,17 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'contact.form.message': 'Хабарлама',
     'contact.form.submit': 'Жіберу',
     'contact.info.title': 'Байланыс ақпараты',
-    'contact.info.address': 'Алматы қ., Мысал көш., 123',
-    'contact.info.phone': '+7 (727) 123-45-67',
-    'contact.info.email': 'info@roxmotors.com',
-    'contact.info.hours': 'Дс-Жм: 9:00 - 18:00',
+    'contact.info.address': 'Мекенжай',
+    'contact.info.address.value': 'Сарайшық 34 A, Ақмола, Астана, Қазақстан 010000',
+    'contact.info.phone': 'Телефон',
+    'contact.info.hours': 'Дс–Жм: 9:00 – 18:00',
+    'contact.info.email': 'Email',
     'footer.about.title': 'Компания туралы',
     'footer.about.description': 'ROX Motors - инновациялық және экологиялық таза көлік шешімдерін жасайтын Қазақстанның алғашқы электромобиль өндірушісі.',
     'footer.navigation': 'Навигация',
     'footer.contact.title': 'Байланыс',
-    'footer.contact.address': 'Алматы қ., Мысал көш., 123',
-    'footer.contact.phone': '+7 (727) 123-45-67',
+    'footer.contact.address': 'Сарайшык 34 А, Ақмола, Астана, Қазақстан 010000',
+    'footer.contact.phone': '+7 (771) 525 35 95',
     'footer.contact.email': 'info@roxmotors.com',
     'footer.social': 'Әлеуметтік желілер',
     'footer.rights': 'Барлық құқықтар қорғалған',
@@ -458,7 +794,137 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'admin.amount': 'Сомасы',
     'admin.actions': 'Әрекеттер',
     'admin.view': 'Көру',
-    'admin.comingSoon': 'Жақында қолжетімді болады'
+    'admin.comingSoon': 'Жақында қолжетімді болады',
+    'config.title': 'Конфигуратор',
+    'config.subtitle': 'Өзіңіздің мінсіз ROX01-ді жасаңыз',
+    'config.rotate': 'Көру үшін бұру',
+    'config.color.title': 'Түсті таңдаңыз',
+    'config.wheels.title': 'Дөңгелектерді таңдаңыз',
+    'config.interior.title': 'Интерьерді таңдаңыз',
+    'config.total': 'Жалпы баға',
+    'config.order': 'Тапсырыс беру',
+    'wheels.standard': 'Стандартты',
+    'wheels.sport': 'Спорттық',
+    'wheels.luxury': 'Люкс',
+    'interior.standard': 'Стандартты',
+    'interior.premium': 'Премиум',
+    'interior.luxury': 'Люкс',
+    'about.title': 'Компания туралы',
+    'about.subtitle': 'Қазақстанның автомобиль өнеркәсібіндегі инновациялар',
+    'about.mission.title': 'Біздің миссиямыз',
+    'about.mission.description': 'Қазақстандағы көлік болашағын өзгертетін озық электромобильдер жасау',
+    'about.vision.title': 'Біздің көзқарасымыз',
+    'about.vision.description': 'Орталық Азиядағы электромобиль өндірісінің көшбасшысы болу',
+    'about.history.title': 'Компания тарихы',
+    'about.history.year2020': '2020',
+    'about.history.year2021': '2021',
+    'about.history.year2022': '2022',
+    'about.history.year2023': '2023',
+    'about.history.year2024': '2024',
+    'about.history.year2025': '2025',
+    'about.history.title2020': 'Компанияның құрылуы',
+    'about.history.title2021': 'Әзірлеудің басталуы',
+    'about.history.title2022': 'Алғашқы прототиптер',
+    'about.history.title2023': 'Өндірістің іске қосылуы',
+    'about.history.title2024': 'Модельдік қатардың кеңеюі',
+    'about.history.title2025': 'Халықаралық нарыққа шығу',
+    'about.history.description2020': 'ROX Motors компаниясының құрылуы',
+    'about.history.description2021': 'Алғашқы электромобильді әзірлеудің басталуы',
+    'about.history.description2022': 'Алғашқы прототиптерді жасау және тестілеу',
+    'about.history.description2023': 'ROX01 сериялық өндірісінің басталуы',
+    'about.history.description2024': 'Жаңа модельдерді әзірлеу',
+    'about.history.description2025': 'Халықаралық нарыққа шығу',
+    'about.values.title': 'Біздің құндылықтарымыз',
+    'about.values.innovation.title': 'Инновациялар',
+    'about.values.innovation.description': 'Үнемі жетілдіру және жаңа технологияларды енгізуге ұмтылу',
+    'about.values.sustainability.title': 'Тұрақты даму',
+    'about.values.sustainability.description': 'Қоршаған орта мен болашақ ұрпақ туралы қамқорлық',
+    'about.values.quality.title': 'Сапа',
+    'about.values.quality.description': 'Өндірістің барлық кезеңдерінде жоғары стандарттар',
+    'about.values.customer.title': 'Клиентке бағдарлану',
+    'about.values.customer.description': 'Клиенттеріміздің қажеттіліктері мен тілектеріне назар аудару',
+    'manuals.title': 'Нұсқаулықтар',
+    'manuals.subtitle': 'ROX01 құжаттамасы мен пайдалану нұсқаулықтары',
+    'manuals.download': 'PDF жүктеу',
+    'manuals.support.title': 'Техникалық қолдау',
+    'manuals.support.description': 'Егер сұрақтарыңыз болса, біздің қолдау қызметі әрдайым көмектесуге дайын',
+    'manuals.owner.title': 'Пайдаланушы нұсқаулығы',
+    'manuals.owner.description': 'ROX01 пайдалануға арналған толық нұсқаулық',
+    'manuals.service.title': 'Қызмет көрсету нұсқаулығы',
+    'manuals.service.description': 'Қызмет көрсету және жөндеу үшін техникалық ақпарат',
+    'manuals.quick.title': 'Қысқаша нұсқаулық',
+    'manuals.quick.description': 'Негізгі функциялар мен жылдам бастау',
+    'manuals.user.title': 'Пайдаланушы нұсқаулығы',
+    'manuals.user.description': 'ROX01 пайдалануға арналған толық нұсқаулық',
+    'manuals.warranty.title': 'Кепілдік нұсқаулығы',
+    'manuals.warranty.description': 'Кепілдік және қызмет көрсету шарттары',
+    'manuals.safety.title': 'Қауіпсіздік нұсқаулығы',
+    'manuals.safety.description': 'Қауіпсіздік және пайдалану ережелері туралы маңызды ақпарат',
+    'price.title': 'Бағалар мен жинақтамалар',
+    'price.subtitle': 'ROX01 жинақтамасын таңдаңыз',
+    'price.standard.title': 'Стандарт',
+    'price.standard.features': '- Негізгі жинақтама',
+    'price.premium.title': 'Премиум',
+    'price.premium.features': '- Кеңейтілген жинақтама',
+    'price.luxury.title': 'Люкс',
+    'price.luxury.features': '- Максималды жинақтама',
+    'price.select': 'Конфигурацияны таңдау',
+    'price.financing.title': 'Қолжетімді қаржыландыру',
+    'price.financing.description': 'Біз ROX01 сатып алу үшін икемді қаржыландыру шарттарын ұсынамыз',
+    'price.financing.button': 'Көбірек білу',
+    'price.feature.battery': '100 кВтс батарея',
+    'price.feature.range': '500 км жүріс қашықтығы',
+    'price.feature.speed': '0-100 км/сағ 4.5 секундта',
+    'price.feature.charging': 'Жылдам зарядтау',
+    'price.feature.interior': 'Премиум интерьер',
+    'price.feature.warranty': '5 жыл кепілдік',
+    'privacy.title': 'Құпиялылық саясаты',
+    'privacy.subtitle': 'Біз сіздің деректеріңізді қалай қорғаймыз',
+    'privacy.collection.title': 'Ақпарат жинау',
+    'privacy.collection.content': 'Біз сіз біздің қызметтерімізді пайдалану кезінде берген ақпаратты жинаймыз.\nБұған есіміңіз, электрондық пошта мекенжайы және телефон нөмірі сияқты жеке ақпарат кіруі мүмкін.',
+    'privacy.usage.title': 'Ақпаратты пайдалану',
+    'privacy.usage.content': 'Біз жиналған ақпаратты қызметтерімізді ұсыну және жақсарту үшін пайдаланамыз.\nСіздің ақпаратыңыз сіздің тәжірибеңізді дербестендіруге және сізбен байланысуға көмектеседі.',
+    'privacy.sharing.title': 'Ақпарат тарату',
+    'privacy.sharing.content': 'Біз сіздің жеке ақпаратыңызды үшінші тараптарға сатпаймыз және бермейміз.\nЗаңнамада қарастырылған жағдайлар ерекшелік болып табылады.',
+    'privacy.security.title': 'Қауіпсіздік',
+    'privacy.security.content': 'Біз сіздің ақпаратыңызды қорғау үшін қажетті шараларды қолданамыз.\nДеректерді шифрлау мен қауіпсіз сақтаудың заманауи технологияларын қолданамыз.',
+    'privacy.cookies.title': 'Cookie файлдары',
+    'privacy.cookies.content': 'Біз сайттың жұмысын жақсарту үшін cookie файлдарын пайдаланамыз.\nБраузеріңізді cookie файлдарын пайдаланудан бас тарту үшін баптай аласыз.',
+    'privacy.rights.title': 'Сіздің құқықтарыңыз',
+    'privacy.rights.content': 'Сіздің жеке ақпаратыңызға қол жеткізу құқығыңыз бар.\nСіз өз ақпаратыңызды жоюды немесе өзгертуді сұрай аласыз.',
+    'privacy.contact.title': 'Бізбен байланысу',
+    'privacy.contact.description': 'Егер сізде біздің құпиялылық саясатымыз туралы сұрақтар болса, бізбен байланысыңыз:',
+    'privacy.contact.email': 'Email',
+    'privacy.contact.phone': 'Телефон',
+    'privacy.contact.address': 'Мекенжай',
+    'privacy.contact.address.value': 'Сарайшык 34 А, Ақмола, Астана, Қазақстан 010000',
+    'privacy.lastUpdated': 'Соңғы жаңарту',
+    'privacy.lastUpdated.date': '20 мамыр 2025 ж.',
+    'warranty.title': 'Кепілдік',
+    'warranty.subtitle': 'Кепілдік қызмет көрсету туралы ақпарат',
+    'warranty.terms.title': 'Кепілдік шарттары',
+    'warranty.terms.1': 'Кепілдік 5 жыл немесе 150 000 км жүріске дейін жарамды',
+    'warranty.terms.2': 'Батареяға кепілдік - 8 жыл немесе 200 000 км жүріс',
+    'warranty.terms.3': 'Кепілдік барлық өндірістік ақауларға қолданылады',
+    'warranty.terms.4': 'Кепілдік қызметі барлық ресми сервис орталықтарында қолжетімді',
+    'warranty.terms.5': 'Кепілдікті сақтау үшін жүйелі техникалық қызмет көрсету міндетті',
+    'warranty.service.title': 'Сервистік қызмет көрсету',
+    'warranty.service.description': 'Біз кепілдік қызметін алудың бірнеше тәсілін ұсынамыз',
+    'warranty.service.online.title': 'Онлайн жазылу',
+    'warranty.service.online.description': 'Біздің сайт арқылы сервиске жазылыңыз',
+    'warranty.service.phone.title': 'Телефон арқылы',
+    'warranty.service.phone.description': 'Көмек алу үшін бізбен телефон арқылы байланысыңыз.',
+    'warranty.service.email.title': 'Электрондық пошта арқылы',
+    'warranty.service.email.description': 'Бізге электрондық пошта арқылы жазыңыз.',
+    'warranty.service.chat.title': 'Чат арқылы',
+    'warranty.service.chat.description': 'Онлайн-чатта жедел көмек алыңыз.',
+    'warranty.battery.description': 'Жоғары вольтты батареяға кепілдік ақауларды жөндеуді және минималды сыйымдылықты сақтауды қамтиды.',
+    'warranty.motor.description': 'Электр қозғалтқышы мен оның барлық компоненттеріне толық кепілдік.',
+    'warranty.body.description': 'Тот басудан және құрылымдық ақаулардан қорғау.',
+    'warranty.paint.description': 'Бояу жабынының ақаулары мен оңуына кепілдік.',
+    'dealer.info': 'ROX компаниясының Астана қаласындағы ресми дилері',
+    'warranty.info': 'Жалпы кепілдік 5 жыл және аккумуляторға 8 жыл',
+    'service.info': 'Астана қаласындағы сервис орталығы'
   },
   en: {
     'nav.home': 'Home',
@@ -473,7 +939,7 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'gallery.exterior': 'Exterior',
     'gallery.interior': 'Interior',
     'gallery.details': 'Details',
-    'hero.title': 'ROX01 SUV',
+    'hero.title': 'ROX01',
     'hero.subtitle': 'Next Generation Electric Crossover',
     'hero.button': 'Configure',
     'specs.title': 'Technical Specifications',
@@ -528,6 +994,30 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'car.color.gray': 'Gray',
     'car.color.brown': 'Brown',
     'car.color.silver': 'Silver',
+    'car.subtitle': 'ROX01 - Next Generation Electric Crossover',
+    'car.description': 'ROX 01 - thoughtfully configured for your needs.',
+    'car.features.title': 'Features',
+    'car.features.description': 'Learn more about the advantages of ROX01.',
+    'car.features.1': 'Fully Electric Motor',
+    'car.features.2': 'Range up to 500 km',
+    'car.features.3': '0-100 km/h in 4.5 seconds',
+    'car.features.4': 'Smart Charging System',
+    'car.features.5': 'Advanced Safety Systems',
+    'car.price.7seater': '29,900,000 tenge',
+    'car.price.6seater': '31,500,000 tenge',
+    'car.configuration.title': 'Available Configurations',
+    'car.configuration.7seater': '7-seat configuration',
+    'car.configuration.6seater': '6-seat configuration',
+    'car.configuration.seating': 'Model is available in 7-seat configuration for 29,900,000 tenge and 6-seat configuration for 31,500,000 tenge.',
+    'car.configuration.difference': 'The key difference is the second row. The 6-seat version features individual Zero Gravity seats with enhanced adjustment and maximum comfort for long journeys.',
+    'car.configuration.choice': 'The choice is yours: capacity or premium ergonomics.',
+    'car.meaning.line': 'ROX 01 - meaning in every line.',
+    'car.meaning.stone': 'Stone symbol - strength, stability, inner power.',
+    'car.meaning.style': 'This is not just style. This is character in details.',
+    'car.spirit.title': 'ROX Spirit',
+    'car.spirit.description': 'When wind meets earth, when horses soar towards the horizon - the true spirit of ROX 01 is born.',
+    'car.spirit.spring': 'Spring in the steppe is a time of power, freedom, and forward momentum.',
+    'car.spirit.power': 'These are not just frames. This is power. This is the primal force of nature. This is ROX.',
     'contact.title': 'Contact Us',
     'contact.subtitle': 'We are always ready to answer your questions',
     'contact.description': 'Fill out the form, and our manager will contact you shortly',
@@ -541,16 +1031,17 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'contact.form.message': 'Message',
     'contact.form.submit': 'Send',
     'contact.info.title': 'Contact Information',
-    'contact.info.address': '123 Example St., Almaty',
-    'contact.info.phone': '+7 (727) 123-45-67',
-    'contact.info.email': 'info@roxmotors.com',
-    'contact.info.hours': 'Mon-Fri: 9:00 AM - 6:00 PM',
+    'contact.info.address': 'Address',
+    'contact.info.address.value': 'Saraishyk 34 A, Akmola, Astana, Kazakhstan 010000',
+    'contact.info.phone': 'Phone',
+    'contact.info.hours': 'Mon–Fri: 9:00 – 18:00',
+    'contact.info.email': 'Email',
     'footer.about.title': 'About Us',
     'footer.about.description': 'ROX Motors is Kazakhstan\'s first electric vehicle manufacturer, creating innovative and eco-friendly transportation solutions.',
     'footer.navigation': 'Navigation',
     'footer.contact.title': 'Contact',
-    'footer.contact.address': '123 Example St., Almaty',
-    'footer.contact.phone': '+7 (727) 123-45-67',
+    'footer.contact.address': 'Saraishyk 34 A, Astana, Kazakhstan 010000',
+    'footer.contact.phone': '+7 (771) 525 35 95',
     'footer.contact.email': 'info@roxmotors.com',
     'footer.social': 'Social Media',
     'footer.rights': 'All rights reserved',
@@ -611,6 +1102,136 @@ export const translations: Record<Language, Record<TranslationKey, string>> = {
     'admin.amount': 'Amount',
     'admin.actions': 'Actions',
     'admin.view': 'View',
-    'admin.comingSoon': 'Coming Soon'
+    'admin.comingSoon': 'Coming Soon',
+    'config.title': 'Configurator',
+    'config.subtitle': 'Create your perfect ROX01',
+    'config.rotate': 'Rotate for viewing',
+    'config.color.title': 'Choose color',
+    'config.wheels.title': 'Choose wheels',
+    'config.interior.title': 'Choose interior',
+    'config.total': 'Total price',
+    'config.order': 'Place order',
+    'wheels.standard': 'Standard',
+    'wheels.sport': 'Sport',
+    'wheels.luxury': 'Luxury',
+    'interior.standard': 'Standard',
+    'interior.premium': 'Premium',
+    'interior.luxury': 'Luxury',
+    'about.title': 'About Us',
+    'about.subtitle': 'Innovation in Kazakhstan\'s Automotive Industry',
+    'about.mission.title': 'Our Mission',
+    'about.mission.description': 'To create advanced electric vehicles that will transform the future of transportation in Kazakhstan',
+    'about.vision.title': 'Our Vision',
+    'about.vision.description': 'To become the leader in electric vehicle manufacturing in Central Asia',
+    'about.history.title': 'Company History',
+    'about.history.year2020': '2020',
+    'about.history.year2021': '2021',
+    'about.history.year2022': '2022',
+    'about.history.year2023': '2023',
+    'about.history.year2024': '2024',
+    'about.history.year2025': '2025',
+    'about.history.title2020': 'Company Foundation',
+    'about.history.title2021': 'Development Begins',
+    'about.history.title2022': 'First Prototypes',
+    'about.history.title2023': 'Production Launch',
+    'about.history.title2024': 'Model Line Expansion',
+    'about.history.title2025': 'International Launch',
+    'about.history.description2020': 'Establishment of ROX Motors',
+    'about.history.description2021': 'Beginning of first electric vehicle development',
+    'about.history.description2022': 'Creation and testing of first prototypes',
+    'about.history.description2023': 'Launch of ROX01 serial production',
+    'about.history.description2024': 'Development of new models',
+    'about.history.description2025': 'Expansion to international markets',
+    'about.values.title': 'Our Values',
+    'about.values.innovation.title': 'Innovation',
+    'about.values.innovation.description': 'Continuous pursuit of improvement and new technologies',
+    'about.values.sustainability.title': 'Sustainability',
+    'about.values.sustainability.description': 'Care for the environment and future generations',
+    'about.values.quality.title': 'Quality',
+    'about.values.quality.description': 'High standards at all stages of production',
+    'about.values.customer.title': 'Customer Focus',
+    'about.values.customer.description': 'Attention to our customers\' needs and wishes',
+    'manuals.title': 'Manuals',
+    'manuals.subtitle': 'Documentation and operating instructions for ROX01',
+    'manuals.download': 'Download PDF',
+    'manuals.support.title': 'Technical Support',
+    'manuals.support.description': 'If you have any questions, our support team is always ready to help',
+    'manuals.owner.title': 'Owner\'s Manual',
+    'manuals.owner.description': 'Complete guide to operating your ROX01',
+    'manuals.service.title': 'Service Manual',
+    'manuals.service.description': 'Technical information for maintenance and repair',
+    'manuals.quick.title': 'Quick Start Guide',
+    'manuals.quick.description': 'Essential features and quick start guide',
+    'manuals.user.title': 'User Manual',
+    'manuals.user.description': 'Complete guide to operating your ROX01',
+    'manuals.warranty.title': 'Warranty Guide',
+    'manuals.warranty.description': 'Warranty terms and service conditions',
+    'manuals.safety.title': 'Safety Manual',
+    'manuals.safety.description': 'Important safety information and operating rules',
+    'price.title': 'Prices and Configurations',
+    'price.subtitle': 'Choose your ROX01 configuration',
+    'price.standard.title': 'Standard',
+    'price.standard.features': '- Base configuration',
+    'price.premium.title': 'Premium',
+    'price.premium.features': '- Enhanced configuration',
+    'price.luxury.title': 'Luxury',
+    'price.luxury.features': '- Maximum configuration',
+    'price.select': 'Select Configuration',
+    'price.financing.title': 'Accessible Financing',
+    'price.financing.description': 'We offer flexible financing options for your ROX01 purchase',
+    'price.financing.button': 'Learn More',
+    'price.feature.battery': '100 kWh Battery',
+    'price.feature.range': '500 km Range',
+    'price.feature.speed': '0-100 km/h in 4.5s',
+    'price.feature.charging': 'Fast Charging',
+    'price.feature.interior': 'Premium Interior',
+    'price.feature.warranty': '5 Year Warranty',
+    'privacy.title': 'Privacy Policy',
+    'privacy.subtitle': 'How we protect your data',
+    'privacy.collection.title': 'Information Collection',
+    'privacy.collection.content': 'We collect information that you provide when using our services.\nThis may include personal information such as name, email address, and phone number.',
+    'privacy.usage.title': 'Information Usage',
+    'privacy.usage.content': 'We use the collected information to provide and improve our services.\nYour information helps us personalize your experience and communicate with you.',
+    'privacy.sharing.title': 'Information Sharing',
+    'privacy.sharing.content': 'We do not sell or transfer your personal information to third parties.\nExceptions are cases provided for by law.',
+    'privacy.security.title': 'Security',
+    'privacy.security.content': 'We take necessary measures to protect your information.\nWe use modern encryption technologies and secure data storage.',
+    'privacy.cookies.title': 'Cookies',
+    'privacy.cookies.content': 'We use cookies to improve website functionality.\nYou can configure your browser to reject cookies.',
+    'privacy.rights.title': 'Your Rights',
+    'privacy.rights.content': 'You have the right to access your personal information.\nYou can request deletion or modification of your information.',
+    'privacy.contact.title': 'Contact Us',
+    'privacy.contact.description': 'If you have questions about our privacy policy, contact us:',
+    'privacy.contact.email': 'Email',
+    'privacy.contact.phone': 'Phone',
+    'privacy.contact.address': 'Address',
+    'privacy.contact.address.value': 'Saraishyk 34 A, Astana, Kazakhstan 010000',
+    'privacy.lastUpdated': 'Last Updated',
+    'privacy.lastUpdated.date': 'May 20, 2025',
+    'warranty.title': 'Warranty',
+    'warranty.subtitle': 'Warranty Service Information',
+    'warranty.terms.title': 'Warranty Terms',
+    'warranty.terms.1': 'Warranty is valid for 5 years or 150,000 km',
+    'warranty.terms.2': 'Battery warranty - 8 years or 200,000 km',
+    'warranty.terms.3': 'Warranty covers all manufacturing defects',
+    'warranty.terms.4': 'Warranty service is available at all official service centers',
+    'warranty.terms.5': 'Regular maintenance is required to maintain warranty',
+    'warranty.service.title': 'Service',
+    'warranty.service.description': 'We offer several ways to get warranty service',
+    'warranty.service.online.title': 'Online Booking',
+    'warranty.service.online.description': 'Schedule service through our website',
+    'warranty.service.phone.title': 'By Phone',
+    'warranty.service.phone.description': 'Contact us by phone for assistance.',
+    'warranty.service.email.title': 'By Email',
+    'warranty.service.email.description': 'Write to us via email.',
+    'warranty.service.chat.title': 'By Chat',
+    'warranty.service.chat.description': 'Get instant help through online chat.',
+    'warranty.battery.description': 'High-voltage battery warranty includes defect protection and minimum capacity maintenance.',
+    'warranty.motor.description': 'Full warranty on electric motor and all its components.',
+    'warranty.body.description': 'Protection against rust perforation and structural defects.',
+    'warranty.paint.description': 'Warranty against paint defects and fading.',
+    'dealer.info': 'Official ROX dealer in Astana',
+    'warranty.info': '5-year general warranty and 8-year battery warranty',
+    'service.info': 'ROX Service Center in Astana'
   }
 };

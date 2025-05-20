@@ -135,22 +135,19 @@ export function ContactForm() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4">{t('contact.info.title')}</h3>
               <div className="space-y-4">
-                <p className="flex items-start">
-                  <span className="text-gray-600 w-24">{t('contact.info.address')}</span>
-                  <span>г. Алматы, ул. Примерная, 123</span>
+                <p>
+                  <span className="font-semibold">{t('contact.info.address')}</span><br />
+                  Сарайшық 34 А, Астана, Қазақстан 010000
                 </p>
-                <p className="flex items-start">
-                  <span className="text-gray-600 w-24">{t('contact.info.phone')}</span>
-                  <span>+7 (727) 123-45-67</span>
+                <p>
+                  <span className="font-semibold">{t('contact.info.phone')}</span><br />
+                  +7 (771) 525-35-95
                 </p>
-                <p className="flex items-start">
-                  <span className="text-gray-600 w-24">{t('contact.info.email')}</span>
-                  <span>info@roxmotors.com</span>
+                <p>
+                  <span className="font-semibold">{t('contact.info.email')}</span><br />
+                  info@roxmotors.com
                 </p>
-                <p className="flex items-start">
-                  <span className="text-gray-600 w-24">{t('contact.info.hours')}</span>
-                  <span>Пн-Пт: 9:00 - 18:00</span>
-                </p>
+               
               </div>
             </div>
           </div>

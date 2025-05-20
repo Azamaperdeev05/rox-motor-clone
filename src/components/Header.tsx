@@ -36,7 +36,12 @@ export function Header() {
     { href: "/gallery", label: t('nav.gallery') },
   ];
 
-  const languages = [
+  interface LanguageOption {
+    code: Language;
+    label: string;
+  }
+
+  const languages: LanguageOption[] = [
     { code: 'ru', label: t('language.ru') },
     { code: 'kk', label: t('language.kk') },
     { code: 'en', label: t('language.en') },

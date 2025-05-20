@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from '@/lib/translations';
+import type { TranslationKey } from '@/lib/translations';
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
@@ -25,23 +26,23 @@ const wheels = [
 const interiors = [
   { id: 'standard', name: 'interior.standard', price: 0 },
   { id: 'premium', name: 'interior.premium', price: 2000000 },
-  { id: 'luxury', name: 'interior.luxury', price: 3000000 }
 ];
+
 
 export default function ConfigurationPage() {
   const { language } = useLanguage();
-  const t = (key: string) => translations[language][key];
+  const t = (key: TranslationKey) => translations[language][key];
   
   const [selectedColor, setSelectedColor] = useState('white');
   const [selectedWheels, setSelectedWheels] = useState('standard');
   const [selectedInterior, setSelectedInterior] = useState('standard');
   const [isRotating, setIsRotating] = useState(false);
 
-  const basePrice = 45000000;
-  const totalPrice = basePrice +
-    colors.find(c => c.id === selectedColor)?.price || 0 +
-    wheels.find(w => w.id === selectedWheels)?.price || 0 +
-    interiors.find(i => i.id === selectedInterior)?.price || 0;
+  const basePrice = 29900000; // Base price for 7-seater configuration
+  const selectedColorPrice = colors.find(c => c.id === selectedColor)?.price ?? 0;
+  const selectedWheelsPrice = wheels.find(w => w.id === selectedWheels)?.price ?? 0;
+  const selectedInteriorPrice = interiors.find(i => i.id === selectedInterior)?.price ?? 0;
+  const totalPrice = basePrice + selectedColorPrice + selectedWheelsPrice + selectedInteriorPrice;
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('ru-RU').format(price) + ' ₸';
@@ -108,7 +109,7 @@ export default function ConfigurationPage() {
                       onClick={() => setSelectedColor(color.id)}
                     >
                       <div className="aspect-square rounded-full mb-2" style={{ backgroundColor: color.id }} />
-                      <div className="text-sm">{t(color.name)}</div>
+                      <div className="text-sm">{t(color.name as TranslationKey)}</div>
                       {color.price > 0 && (
                         <div className="text-xs text-primary">+{formatPrice(color.price)}</div>
                       )}
@@ -131,7 +132,7 @@ export default function ConfigurationPage() {
                       onClick={() => setSelectedWheels(wheel.id)}
                     >
                       <div className="aspect-square rounded-full mb-2 bg-gray-700" />
-                      <div className="text-sm">{t(wheel.name)}</div>
+                      <div className="text-sm">{t(wheel.name as TranslationKey)}</div>
                       {wheel.price > 0 && (
                         <div className="text-xs text-primary">+{formatPrice(wheel.price)}</div>
                       )}
@@ -154,7 +155,7 @@ export default function ConfigurationPage() {
                       onClick={() => setSelectedInterior(interior.id)}
                     >
                       <div className="aspect-square rounded-lg mb-2 bg-gray-700" />
-                      <div className="text-sm">{t(interior.name)}</div>
+                      <div className="text-sm">{t(interior.name as TranslationKey)}</div>
                       {interior.price > 0 && (
                         <div className="text-xs text-primary">+{formatPrice(interior.price)}</div>
                       )}
@@ -180,4 +181,4 @@ export default function ConfigurationPage() {
       <Footer />
     </main>
   );
-} 
+}

@@ -3,61 +3,59 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/lib/language-context";
-import { translations } from '@/lib/translations';
+import { translations, TranslationKey } from '@/lib/translations';
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const configurations = [
+interface Configuration {
+  id: string;
+  name: TranslationKey;
+  price: number;
+  features: TranslationKey[];
+}
+
+const configurations: Configuration[] = [
   {
     id: 'standard',
-    name: 'Standard',
+    name: 'price.standard.title',
     price: 45000000,
     features: [
-      'features.standard.battery',
-      'features.standard.range',
-      'features.standard.acceleration',
-      'features.standard.display',
-      'features.standard.seats',
-      'features.standard.climate'
+      'price.feature.battery',
+      'price.feature.range',
+      'price.feature.charging',
+      'price.feature.interior'
     ]
   },
   {
     id: 'premium',
-    name: 'Premium',
+    name: 'price.premium.title',
     price: 55000000,
     features: [
-      'features.premium.battery',
-      'features.premium.range',
-      'features.premium.acceleration',
-      'features.premium.display',
-      'features.premium.seats',
-      'features.premium.climate',
-      'features.premium.sound',
-      'features.premium.panorama'
+      'price.feature.battery',
+      'price.feature.range',
+      'price.feature.charging',
+      'price.feature.interior',
+      'price.feature.speed'
     ]
   },
   {
     id: 'luxury',
-    name: 'Luxury',
+    name: 'price.luxury.title',
     price: 65000000,
     features: [
-      'features.luxury.battery',
-      'features.luxury.range',
-      'features.luxury.acceleration',
-      'features.luxury.display',
-      'features.luxury.seats',
-      'features.luxury.climate',
-      'features.luxury.sound',
-      'features.luxury.panorama',
-      'features.luxury.massage',
-      'features.luxury.autopilot'
+      'price.feature.battery',
+      'price.feature.range',
+      'price.feature.charging',
+      'price.feature.interior',
+      'price.feature.speed',
+      'price.feature.warranty'
     ]
   }
 ];
 
 export default function PricePage() {
   const { language } = useLanguage();
-  const t = (key: string) => translations[language][key];
+  const t = (key: TranslationKey) => translations[language][key];
   const [selectedConfig, setSelectedConfig] = useState('premium');
 
   const formatPrice = (price: number) => {
@@ -94,7 +92,7 @@ export default function PricePage() {
                 }`}
                 onClick={() => setSelectedConfig(config.id)}
               >
-                <h3 className="text-2xl font-bold mb-4">{t(`price.${config.id}.title`)}</h3>
+                <h3 className="text-2xl font-bold mb-4">{t(config.name)}</h3>
                 <div className="text-3xl font-bold text-primary mb-6">
                   {formatPrice(config.price)}
                 </div>
@@ -149,4 +147,4 @@ export default function PricePage() {
       <Footer />
     </main>
   );
-} 
+}

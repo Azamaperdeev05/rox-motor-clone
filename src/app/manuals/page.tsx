@@ -3,11 +3,20 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/lib/language-context";
-import { translations } from '@/lib/translations';
+import { translations, TranslationKey } from '@/lib/translations';
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
-const manuals = [
+interface Manual {
+  id: string;
+  title: TranslationKey;
+  description: TranslationKey;
+  size: string;
+  format: string;
+  url: string;
+}
+
+const manuals: Manual[] = [
   {
     id: 'user',
     title: 'manuals.user.title',
@@ -44,7 +53,7 @@ const manuals = [
 
 export default function ManualsPage() {
   const { language } = useLanguage();
-  const t = (key: string) => translations[language][key];
+  const t = (key: TranslationKey) => translations[language][key];
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -114,4 +123,3 @@ export default function ManualsPage() {
     </main>
   );
 }
- 

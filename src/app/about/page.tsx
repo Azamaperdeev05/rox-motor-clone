@@ -3,12 +3,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/lib/language-context";
-import { translations } from '@/lib/translations';
+import { translations, TranslationKey } from '@/lib/translations';
 import { motion } from "framer-motion";
 
 export default function AboutPage() {
   const { language } = useLanguage();
-  const t = (key: string) => translations[language][key];
+  const t = (key: TranslationKey) => translations[language][key];
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -53,13 +53,18 @@ export default function AboutPage() {
             className="mb-16"
           >
             <h2 className="text-2xl font-bold mb-8 text-center">{t('about.history.title')}</h2>
-            <div className="space-y-8">
-              {[1, 2, 3].map((year) => (
+            <div className="space-y-8">              {[2020, 2021, 2022, 2023, 2024, 2025].map((year) => (
                 <div key={year} className="flex items-start gap-4">
-                  <div className="w-24 text-primary font-bold">{t(`about.history.year${year}`)}</div>
+                  <div className="w-24 text-primary font-bold">
+                    {t(`about.history.year${year}` as TranslationKey)}
+                  </div>
                   <div>
-                    <h3 className="font-bold mb-2">{t(`about.history.title${year}`)}</h3>
-                    <p className="text-gray-300">{t(`about.history.description${year}`)}</p>
+                    <h3 className="font-bold mb-2">
+                      {t(`about.history.title${year}` as TranslationKey)}
+                    </h3>
+                    <p className="text-gray-300">
+                      {t(`about.history.description${year}` as TranslationKey)}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -73,11 +78,14 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="text-2xl font-bold mb-8">{t('about.values.title')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {['innovation', 'sustainability', 'quality'].map((value) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">              {['innovation', 'sustainability', 'quality'].map((value) => (
                 <div key={value} className="p-6 bg-gray-900 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4">{t(`about.values.${value}.title`)}</h3>
-                  <p className="text-gray-300">{t(`about.values.${value}.description`)}</p>
+                  <h3 className="text-xl font-bold mb-4">
+                    {t(`about.values.${value}.title` as TranslationKey)}
+                  </h3>
+                  <p className="text-gray-300">
+                    {t(`about.values.${value}.description` as TranslationKey)}
+                  </p>
                 </div>
               ))}
             </div>
@@ -88,4 +96,4 @@ export default function AboutPage() {
       <Footer />
     </main>
   );
-} 
+}
