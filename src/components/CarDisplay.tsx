@@ -137,32 +137,6 @@ export function CarDisplay() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex justify-center mb-8"
-        >
-          <div className="flex space-x-4">
-            {colors.map((color) => (
-              <motion.button
-                key={color.id}
-                onClick={() => setSelectedColor(color)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-10 h-10 rounded-full border-2 transition-all ${
-                  selectedColor.id === color.id ? "border-black scale-110" : "border-gray-300"
-                }`}
-                style={{ backgroundColor: color.hex }}
-                aria-label={`Select ${t(color.name)} color`}
-              >
-                <span className="sr-only">{t(color.name)}</span>
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center"
         >
